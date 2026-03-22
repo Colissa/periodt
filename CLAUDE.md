@@ -17,7 +17,10 @@ composer run test
 # Initial setup (install deps, generate key, migrate, build frontend)
 composer run setup
 
-# Run migrations
+# Fresh database with seed data (42 cycles of real user data)
+php artisan migrate:fresh --seed
+
+# Run migrations only (no seed)
 php artisan migrate
 
 # Run a single test file
